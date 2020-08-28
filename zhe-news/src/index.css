@@ -9,5 +9,25 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+.Post {
+  display: flex;
+  margin: 30px;
+  box-shadow: 0 0 10px rgba(0,0,0,.5);
+  padding: 15px;
+  margin-bottom: 20px;
+  height: 250px;
+
+}
+.Post__image {
+  flex: 0.3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.Post__info{
+  flex: 1;
+  padding: 15px 30px;
 }
