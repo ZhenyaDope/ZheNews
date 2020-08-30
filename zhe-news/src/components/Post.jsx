@@ -1,19 +1,26 @@
 import React from 'react'
 
+import {Item, Label} from "semantic-ui-react";
+
 const Post = props => {
+
+    const subString = s => s.length >= 250 ? s.substr(0,250) + '...'  : s
+
     return (
-        <div className='Post'>
-            <div
-                className='Post__image'
-                style={{
-                    backgroundImage: `url(${props.image})`
-                }}
-            />
-            <div className='Post__info'>
-                <h2 className='Post__title'>{props.title}</h2>
-                <p className='Post__description'>{props.description}</p>
-            </div>
-        </div>
+
+        <Item>
+            <Item.Image src={props.image} />
+
+            <Item.Content>
+                <Item.Header as='a'>{props.title}</Item.Header>
+
+                <Item.Description>{subString(props.description)}</Item.Description>
+                <Item.Extra>
+                    <Label icon='eye' content={`Просмотров: ${props.views.substr(0,1)}`} />
+                </Item.Extra>
+            </Item.Content>
+        </Item>
+
     );
 }
 

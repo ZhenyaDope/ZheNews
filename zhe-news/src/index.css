@@ -13,12 +13,14 @@ code {
 }
 
 .Post {
+  text-align: left;
+  overflow: hidden;
   display: flex;
   margin: 30px;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
   padding: 15px;
   margin-bottom: 20px;
-  height: 250px;
+  min-height: 250px;
 
 }
 .Post__image {
